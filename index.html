@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chatbot - Your Intelligent Assistant</title>
+    <title>Cybersecurity Defense Guide - Protect Against Common Threats</title>
     <style>
         * {
             margin: 0;
@@ -13,21 +13,19 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding: 20px;
         }
 
         .container {
-            max-width: 900px;
-            background: rgba(255, 255, 255, 0.95);
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.98);
             border-radius: 20px;
-            padding: 60px 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 60px 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             animation: fadeIn 0.8s ease-in;
+            margin: 40px auto;
         }
 
         @keyframes fadeIn {
@@ -46,16 +44,17 @@
             margin-bottom: 40px;
         }
 
-        .chatbot-icon {
-            width: 100px;
-            height: 100px;
+        .security-icon {
+            width: 120px;
+            height: 120px;
             margin: 0 auto 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             animation: pulse 2s infinite;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
         }
 
         @keyframes pulse {
@@ -67,88 +66,152 @@
             }
         }
 
-        .chatbot-icon::before {
-            content: "💬";
-            font-size: 50px;
+        .security-icon::before {
+            content: "�️";
+            font-size: 60px;
         }
 
         h1 {
-            color: #333;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            color: #2c3e50;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .subtitle {
-            color: #666;
-            font-size: 1.2em;
+            color: #e74c3c;
+            font-size: 1.3em;
             margin-bottom: 30px;
+            font-weight: 600;
         }
 
-        .features {
+        h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin: 50px 0 25px 0;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #e74c3c;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.5em;
+            margin: 30px 0 15px 0;
+        }
+
+        .threat-section {
+            margin: 40px 0;
+        }
+
+        .threat-card {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #e74c3c;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .threat-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.2);
+        }
+
+        .defense-card {
+            background: linear-gradient(135deg, #f0fff4 0%, #d4f4dd 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #27ae60;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .defense-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.2);
+        }
+
+        .threat-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .threat-title {
+            color: #c0392b;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .defense-title {
+            color: #27ae60;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .content-text {
+            color: #34495e;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .content-list {
+            color: #34495e;
+            line-height: 1.8;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .content-list li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box strong {
+            color: #856404;
+        }
+
+        .intro-text {
+            color: #34495e;
+            line-height: 1.9;
+            margin: 30px 0;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin: 40px 0;
         }
 
-        .feature-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .feature-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .feature-title {
-            color: #333;
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .feature-description {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .cta-section {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .stat-box {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: white;
-            padding: 18px 50px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
-        }
-
-        .info-text {
-            color: #666;
-            line-height: 1.8;
-            margin: 20px 0;
+            padding: 25px;
+            border-radius: 12px;
             text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.95;
         }
 
         @media (max-width: 768px) {
@@ -160,7 +223,11 @@
                 font-size: 2em;
             }
 
-            .features {
+            h2 {
+                font-size: 1.6em;
+            }
+
+            .stats-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -169,41 +236,377 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="chatbot-icon"></div>
-            <h1>Welcome to Our AI Chatbot</h1>
-            <p class="subtitle">Your intelligent assistant is ready to help!</p>
+            <div class="security-icon"></div>
+            <h1>Cybersecurity Defense Guide</h1>
+            <p class="subtitle">Protect Your Digital Assets from Common Threats</p>
         </div>
 
-        <p class="info-text">
-            Experience the future of conversation with our advanced AI-powered chatbot. 
-            Get instant answers, personalized assistance, and seamless support 24/7.
+        <p class="intro-text">
+            In today's interconnected world, cybersecurity threats are evolving at an unprecedented pace.
+            Understanding common attack methods and implementing robust defense strategies is crucial for
+            protecting your personal and organizational data. This comprehensive guide covers the most
+            prevalent hacking techniques and proven cybersecurity measures to defend against them.
         </p>
 
-        <div class="features">
-            <div class="feature-card">
-                <div class="feature-icon">🚀</div>
-                <h3 class="feature-title">Lightning Fast</h3>
-                <p class="feature-description">Get instant responses to your questions in real-time</p>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">4.1B</div>
+                <div class="stat-label">Records Breached in 2023</div>
             </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">🧠</div>
-                <h3 class="feature-title">Smart AI</h3>
-                <p class="feature-description">Powered by advanced AI to understand context and nuance</p>
+            <div class="stat-box">
+                <div class="stat-number">$4.45M</div>
+                <div class="stat-label">Average Data Breach Cost</div>
             </div>
+            <div class="stat-box">
+                <div class="stat-number">493.33M</div>
+                <div class="stat-label">Ransomware Attacks Yearly</div>
+            </div>
+        </div>
 
-            <div class="feature-card">
-                <div class="feature-icon">🌍</div>
-                <h3 class="feature-title">Always Available</h3>
-                <p class="feature-description">24/7 support whenever and wherever you need it</p>
+        <h2>🎣 1. Phishing Attacks</h2>
+
+        <div class="threat-card">
+            <div class="threat-icon">⚠️</div>
+            <h3 class="threat-title">What is Phishing?</h3>
+            <p class="content-text">
+                Phishing is a social engineering attack where cybercriminals impersonate legitimate organizations
+                to trick victims into revealing sensitive information such as passwords, credit card numbers, or
+                social security numbers. These attacks typically arrive via email, text messages (smishing), or
+                phone calls (vishing).
+            </p>
+            <p class="content-text"><strong>Common Phishing Tactics:</strong></p>
+            <ul class="content-list">
+                <li><strong>Spear Phishing:</strong> Highly targeted attacks aimed at specific individuals or organizations</li>
+                <li><strong>Clone Phishing:</strong> Legitimate emails are copied and modified with malicious links</li>
+                <li><strong>Whaling:</strong> Attacks targeting high-profile executives and decision-makers</li>
+                <li><strong>Email Spoofing:</strong> Forging sender addresses to appear from trusted sources</li>
+                <li><strong>Urgent Requests:</strong> Creating false urgency to bypass critical thinking</li>
+            </ul>
+        </div>
+
+        <div class="defense-card">
+            <h3 class="defense-title">🛡️ Defense Strategies Against Phishing</h3>
+            <ul class="content-list">
+                <li><strong>Email Authentication:</strong> Implement SPF, DKIM, and DMARC protocols to verify sender authenticity</li>
+                <li><strong>Security Awareness Training:</strong> Regularly educate employees about recognizing phishing attempts</li>
+                <li><strong>Multi-Factor Authentication (MFA):</strong> Add extra layers of verification beyond passwords</li>
+                <li><strong>Email Filtering:</strong> Deploy advanced spam filters and anti-phishing tools</li>
+                <li><strong>Link Verification:</strong> Hover over links before clicking and verify URLs carefully</li>
+                <li><strong>Report Suspicious Emails:</strong> Establish clear reporting procedures for potential phishing</li>
+                <li><strong>Browser Security:</strong> Use browsers with built-in phishing detection</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Pro Tip:</strong> Never click links in unsolicited emails. Instead, manually type the official
+                website URL into your browser or use bookmarked links.
+            </div>
+        </div>
+
+        <h2>🔐 2. Password Attacks</h2>
+
+        <div class="threat-card">
+            <div class="threat-icon">�</div>
+            <h3 class="threat-title">Types of Password Attacks</h3>
+            <p class="content-text">
+                Password attacks aim to gain unauthorized access by cracking or stealing user credentials.
+                These remain one of the most common and effective attack vectors due to weak password practices.
+            </p>
+            <p class="content-text"><strong>Common Password Attack Methods:</strong></p>
+            <ul class="content-list">
+                <li><strong>Brute Force Attacks:</strong> Systematically trying all possible password combinations</li>
+                <li><strong>Dictionary Attacks:</strong> Using lists of common words and passwords</li>
+                <li><strong>Credential Stuffing:</strong> Using stolen username/password pairs from data breaches</li>
+                <li><strong>Rainbow Table Attacks:</strong> Using precomputed hash tables to crack passwords</li>
+                <li><strong>Keylogging:</strong> Recording keystrokes to capture passwords as they're typed</li>
+                <li><strong>Password Spraying:</strong> Trying common passwords across many accounts</li>
+            </ul>
+        </div>
+
+        <div class="defense-card">
+            <h3 class="defense-title">🛡️ Password Security Best Practices</h3>
+            <ul class="content-list">
+                <li><strong>Strong Password Policy:</strong> Require minimum 12+ characters with complexity requirements</li>
+                <li><strong>Password Managers:</strong> Use encrypted password managers to generate and store unique passwords</li>
+                <li><strong>Multi-Factor Authentication:</strong> Implement MFA on all critical accounts and systems</li>
+                <li><strong>Account Lockout Policies:</strong> Limit login attempts to prevent brute force attacks</li>
+                <li><strong>Password Hashing:</strong> Use strong hashing algorithms (bcrypt, Argon2) with salt</li>
+                <li><strong>Regular Password Changes:</strong> Enforce periodic password updates for sensitive accounts</li>
+                <li><strong>Breach Monitoring:</strong> Monitor for compromised credentials using services like Have I Been Pwned</li>
+                <li><strong>Passwordless Authentication:</strong> Consider biometrics, hardware tokens, or passkeys</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Pro Tip:</strong> Use passphrases (e.g., "Coffee!Morning@Sunrise2024") instead of complex
+                passwords - they're easier to remember and harder to crack.
+            </div>
+        </div>
+
+        <h2>💉 3. Malware and Ransomware</h2>
+
+        <div class="threat-card">
+            <div class="threat-icon">�</div>
+            <h3 class="threat-title">Understanding Malware Threats</h3>
+            <p class="content-text">
+                Malware (malicious software) encompasses various types of harmful programs designed to damage,
+                disrupt, or gain unauthorized access to computer systems. Ransomware, a particularly devastating
+                form, encrypts victim data and demands payment for decryption.
+            </p>
+            <p class="content-text"><strong>Common Malware Types:</strong></p>
+            <ul class="content-list">
+                <li><strong>Ransomware:</strong> Encrypts files and demands ransom payment</li>
+                <li><strong>Trojans:</strong> Disguised as legitimate software to gain system access</li>
+                <li><strong>Spyware:</strong> Secretly monitors and collects user information</li>
+                <li><strong>Worms:</strong> Self-replicating malware that spreads across networks</li>
+                <li><strong>Rootkits:</strong> Provides persistent, privileged access while hiding presence</li>
+                <li><strong>Adware:</strong> Displays unwanted advertisements and tracks browsing</li>
+                <li><strong>Cryptojackers:</strong> Uses system resources to mine cryptocurrency</li>
+            </ul>
+        </div>
+
+        <div class="defense-card">
+            <h3 class="defense-title">🛡️ Malware Prevention and Response</h3>
+            <ul class="content-list">
+                <li><strong>Endpoint Protection:</strong> Deploy comprehensive antivirus and anti-malware solutions</li>
+                <li><strong>Regular Backups:</strong> Maintain offline, encrypted backups using the 3-2-1 rule</li>
+                <li><strong>Software Updates:</strong> Keep all systems and applications patched and current</li>
+                <li><strong>Email Security:</strong> Scan attachments and block executable files</li>
+                <li><strong>Application Whitelisting:</strong> Only allow approved applications to run</li>
+                <li><strong>Network Segmentation:</strong> Isolate critical systems to limit malware spread</li>
+                <li><strong>User Privileges:</strong> Implement least privilege access principles</li>
+                <li><strong>Incident Response Plan:</strong> Develop and test ransomware response procedures</li>
+                <li><strong>EDR Solutions:</strong> Use Endpoint Detection and Response for advanced threat detection</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Pro Tip:</strong> Follow the 3-2-1 backup rule: 3 copies of data, on 2 different media types,
+                with 1 copy stored offsite or offline.
+            </div>
+        </div>
+
+        <h2>🌐 4. Man-in-the-Middle (MitM) Attacks</h2>
+
+        <div class="threat-card">
+            <div class="threat-icon">👤</div>
+            <h3 class="threat-title">How MitM Attacks Work</h3>
+            <p class="content-text">
+                Man-in-the-Middle attacks occur when an attacker secretly intercepts and potentially alters
+                communications between two parties who believe they are directly communicating with each other.
+                This allows attackers to eavesdrop on sensitive data or inject malicious content.
+            </p>
+            <p class="content-text"><strong>Common MitM Attack Vectors:</strong></p>
+            <ul class="content-list">
+                <li><strong>Wi-Fi Eavesdropping:</strong> Intercepting data on unsecured public Wi-Fi networks</li>
+                <li><strong>Evil Twin Attacks:</strong> Creating fake Wi-Fi hotspots that mimic legitimate ones</li>
+                <li><strong>Session Hijacking:</strong> Stealing session cookies to impersonate authenticated users</li>
+                <li><strong>DNS Spoofing:</strong> Redirecting traffic to malicious websites by corrupting DNS responses</li>
+                <li><strong>ARP Spoofing:</strong> Intercepting network traffic by associating attacker's MAC address with legitimate IP</li>
+                <li><strong>SSL Stripping:</strong> Downgrading HTTPS connections to unencrypted HTTP</li>
+            </ul>
+        </div>
+
+        <div class="defense-card">
+            <h3 class="defense-title">🛡️ Protecting Against MitM Attacks</h3>
+            <ul class="content-list">
+                <li><strong>End-to-End Encryption:</strong> Use encrypted communication protocols (HTTPS, TLS 1.3)</li>
+                <li><strong>VPN Usage:</strong> Employ Virtual Private Networks, especially on public networks</li>
+                <li><strong>Certificate Pinning:</strong> Validate SSL/TLS certificates to prevent certificate spoofing</li>
+                <li><strong>HTTPS Everywhere:</strong> Force HTTPS connections and implement HSTS headers</li>
+                <li><strong>Avoid Public Wi-Fi:</strong> Use cellular data or trusted networks for sensitive transactions</li>
+                <li><strong>Network Monitoring:</strong> Implement intrusion detection systems (IDS) to detect anomalies</li>
+                <li><strong>Secure DNS:</strong> Use DNS over HTTPS (DoH) or DNS over TLS (DoT)</li>
+                <li><strong>Multi-Factor Authentication:</strong> Protect against session hijacking with additional verification</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Pro Tip:</strong> Always verify the padlock icon in your browser's address bar and check
+                the certificate details before entering sensitive information.
+            </div>
+        </div>
+
+        <h2>💻 5. SQL Injection Attacks</h2>
+
+        <div class="threat-card">
+            <div class="threat-icon">💾</div>
+            <h3 class="threat-title">Understanding SQL Injection</h3>
+            <p class="content-text">
+                SQL Injection is a code injection technique that exploits vulnerabilities in an application's
+                database layer. Attackers insert malicious SQL statements into input fields, allowing them to
+                view, modify, or delete database contents, bypass authentication, and potentially gain complete
+                control over the database server.
+            </p>
+            <p class="content-text"><strong>Types of SQL Injection:</strong></p>
+            <ul class="content-list">
+                <li><strong>In-band SQLi:</strong> Attacker uses the same channel to launch attack and gather results</li>
+                <li><strong>Blind SQLi:</strong> No direct data transfer; attacker reconstructs database structure through queries</li>
+                <li><strong>Out-of-band SQLi:</strong> Data is retrieved using different channels (DNS, HTTP requests)</li>
+                <li><strong>Union-based SQLi:</strong> Combines results from multiple SELECT statements</li>
+                <li><strong>Time-based SQLi:</strong> Forces database to wait before responding to infer information</li>
+            </ul>
+        </div>
+
+        <div class="defense-card">
+            <h3 class="defense-title">🛡️ SQL Injection Prevention</h3>
+            <ul class="content-list">
+                <li><strong>Parameterized Queries:</strong> Use prepared statements with bound parameters</li>
+                <li><strong>Input Validation:</strong> Validate and sanitize all user inputs with whitelist approach</li>
+                <li><strong>Stored Procedures:</strong> Use stored procedures to encapsulate database logic</li>
+                <li><strong>Least Privilege:</strong> Database accounts should have minimal necessary permissions</li>
+                <li><strong>Web Application Firewalls:</strong> Deploy WAF to filter malicious SQL patterns</li>
+                <li><strong>Error Handling:</strong> Avoid displaying detailed database error messages to users</li>
+                <li><strong>Regular Security Audits:</strong> Conduct code reviews and penetration testing</li>
+                <li><strong>ORM Frameworks:</strong> Use Object-Relational Mapping tools that handle SQL safely</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Pro Tip:</strong> Never concatenate user input directly into SQL queries. Always use
+                parameterized queries or prepared statements.
+            </div>
+        </div>
+
+        <h2>🔗 6. Cross-Site Scripting (XSS)</h2>
+
+        <div class="threat-card">
+            <div class="threat-icon">⚡</div>
+            <h3 class="threat-title">XSS Attack Mechanisms</h3>
+            <p class="content-text">
+                Cross-Site Scripting attacks inject malicious scripts into trusted websites. When other users
+                view the compromised page, the malicious script executes in their browser, potentially stealing
+                cookies, session tokens, or other sensitive information, or performing actions on behalf of the victim.
+            </p>
+            <p class="content-text"><strong>XSS Attack Types:</strong></p>
+            <ul class="content-list">
+                <li><strong>Stored XSS:</strong> Malicious script permanently stored on target server (databases, forums)</li>
+                <li><strong>Reflected XSS:</strong> Script reflected off web server in error messages or search results</li>
+                <li><strong>DOM-based XSS:</strong> Vulnerability exists in client-side code rather than server-side</li>
+                <li><strong>Mutation XSS:</strong> Exploits browser's HTML parser to create XSS from safe-looking code</li>
+            </ul>
+        </div>
+
+        <div class="defense-card">
+            <h3 class="defense-title">🛡️ XSS Prevention Techniques</h3>
+            <ul class="content-list">
+                <li><strong>Output Encoding:</strong> Encode all user-supplied data before rendering in HTML</li>
+                <li><strong>Content Security Policy:</strong> Implement CSP headers to restrict script sources</li>
+                <li><strong>Input Validation:</strong> Validate and sanitize all user inputs on both client and server</li>
+                <li><strong>HTTPOnly Cookies:</strong> Set HTTPOnly flag on cookies to prevent JavaScript access</li>
+                <li><strong>X-XSS-Protection Header:</strong> Enable browser's built-in XSS filtering</li>
+                <li><strong>Template Engines:</strong> Use auto-escaping template engines</li>
+                <li><strong>Regular Updates:</strong> Keep frameworks and libraries updated with security patches</li>
+                <li><strong>Security Testing:</strong> Perform regular XSS vulnerability scanning</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Pro Tip:</strong> Implement a strict Content Security Policy that only allows scripts
+                from trusted sources and disables inline JavaScript.
+            </div>
+        </div>
+
+        <h2>🚪 7. Denial of Service (DoS/DDoS) Attacks</h2>
+
+        <div class="threat-card">
+            <div class="threat-icon">🌊</div>
+            <h3 class="threat-title">DoS and DDoS Explained</h3>
+            <p class="content-text">
+                Denial of Service attacks aim to make a service unavailable by overwhelming it with traffic or
+                exploiting vulnerabilities to crash systems. Distributed Denial of Service (DDoS) attacks use
+                multiple compromised systems (botnets) to amplify the attack's impact.
+            </p>
+            <p class="content-text"><strong>Common DoS/DDoS Methods:</strong></p>
+            <ul class="content-list">
+                <li><strong>Volume-based Attacks:</strong> Saturate bandwidth with massive amounts of traffic</li>
+                <li><strong>Protocol Attacks:</strong> Exploit weaknesses in Layer 3 and 4 protocols (SYN floods)</li>
+                <li><strong>Application Layer Attacks:</strong> Target web applications with seemingly legitimate requests</li>
+                <li><strong>Amplification Attacks:</strong> Use third-party servers to amplify attack traffic</li>
+                <li><strong>Slowloris Attacks:</strong> Keep connections open by sending partial requests</li>
+            </ul>
+        </div>
+
+        <div class="defense-card">
+            <h3 class="defense-title">🛡️ DDoS Mitigation Strategies</h3>
+            <ul class="content-list">
+                <li><strong>DDoS Protection Services:</strong> Use services like Cloudflare, Akamai, or AWS Shield</li>
+                <li><strong>Rate Limiting:</strong> Implement request rate limits per IP address</li>
+                <li><strong>Traffic Analysis:</strong> Monitor traffic patterns to detect anomalies early</li>
+                <li><strong>Redundancy:</strong> Distribute resources across multiple servers and data centers</li>
+                <li><strong>Firewall Rules:</strong> Configure firewalls to drop malicious traffic patterns</li>
+                <li><strong>CDN Usage:</strong> Content Delivery Networks can absorb and distribute traffic</li>
+                <li><strong>Blackhole Routing:</strong> Route attack traffic to null interface as last resort</li>
+                <li><strong>Incident Response Plan:</strong> Have procedures ready for rapid DDoS response</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Pro Tip:</strong> Implement auto-scaling infrastructure that can handle traffic spikes
+                and use CDNs to distribute load globally.
+            </div>
+        </div>
+
+        <h2>🎯 8. Social Engineering</h2>
+
+        <div class="threat-card">
+            <div class="threat-icon">🎭</div>
+            <h3 class="threat-title">The Human Element</h3>
+            <p class="content-text">
+                Social engineering exploits human psychology rather than technical vulnerabilities. Attackers
+                manipulate people into divulging confidential information or performing actions that compromise
+                security. This remains one of the most effective attack vectors because it targets the weakest
+                link in security: humans.
+            </p>
+            <p class="content-text"><strong>Social Engineering Techniques:</strong></p>
+            <ul class="content-list">
+                <li><strong>Pretexting:</strong> Creating fabricated scenarios to extract information</li>
+                <li><strong>Baiting:</strong> Offering something enticing to trick victims (free USB drives)</li>
+                <li><strong>Quid Pro Quo:</strong> Offering services in exchange for information or access</li>
+                <li><strong>Tailgating:</strong> Following authorized personnel into restricted areas</li>
+                <li><strong>Impersonation:</strong> Posing as authority figures, IT support, or executives</li>
+                <li><strong>Scareware:</strong> Frightening users into taking harmful actions</li>
+            </ul>
+        </div>
+
+        <div class="defense-card">
+            <h3 class="defense-title">🛡️ Defending Against Social Engineering</h3>
+            <ul class="content-list">
+                <li><strong>Security Awareness Training:</strong> Regular, comprehensive training for all employees</li>
+                <li><strong>Verification Procedures:</strong> Establish protocols to verify identities and requests</li>
+                <li><strong>Incident Reporting:</strong> Create safe channels for reporting suspicious activities</li>
+                <li><strong>Access Controls:</strong> Implement strict physical and digital access policies</li>
+                <li><strong>Information Classification:</strong> Clearly label and protect sensitive information</li>
+                <li><strong>Simulated Attacks:</strong> Conduct phishing simulations to test and train staff</li>
+                <li><strong>Zero Trust Approach:</strong> Verify every request regardless of source</li>
+                <li><strong>Clear Policies:</strong> Document and communicate security policies clearly</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Pro Tip:</strong> Create a culture where employees feel comfortable questioning unusual
+                requests and reporting suspicious activities without fear of repercussions.
+            </div>
+        </div>
+
+        <h2>📱 Conclusion: Building a Comprehensive Security Posture</h2>
+
+        <div class="defense-card">
+            <p class="content-text">
+                Cybersecurity is not a one-time effort but an ongoing process of vigilance, adaptation, and improvement.
+                The threats outlined above represent just a fraction of the attack vectors that organizations and
+                individuals face daily. A robust security posture requires:
+            </p>
+            <ul class="content-list">
+                <li><strong>Defense in Depth:</strong> Multiple layers of security controls</li>
+                <li><strong>Continuous Monitoring:</strong> Real-time threat detection and response</li>
+                <li><strong>Regular Updates:</strong> Keeping all systems and software current</li>
+                <li><strong>Employee Education:</strong> Ongoing security awareness training</li>
+                <li><strong>Incident Response:</strong> Prepared plans for when breaches occur</li>
+                <li><strong>Risk Assessment:</strong> Regular evaluation of vulnerabilities and threats</li>
+                <li><strong>Compliance:</strong> Adherence to industry standards and regulations</li>
+            </ul>
+            <p class="content-text" style="margin-top: 20px;">
+                Remember: security is everyone's responsibility. By understanding these common attack methods and
+                implementing appropriate defenses, you significantly reduce your risk of becoming a victim of
+                cybercrime. Stay informed, stay vigilant, and stay secure.
+            </p>
+            <div class="highlight-box" style="margin-top: 25px;">
+                <strong>Need Help?</strong> Use our AI-powered chatbot (bottom right corner) to ask questions
+                about specific cybersecurity concerns or get personalized security recommendations!
             </div>
         </div>
     </div>
 
-<!-- Chatbot Widget -->
-<script 
-  src="https://interchat-peach.vercel.app/chatbot-widget.js" 
-  data-api-key="cb_2ffd20a3a6b242be9d7e77b3da146f9e"
-></script>
+    <!-- Chatbot Widget -->
+    <script
+      src="https://interchat-peach.vercel.app/chatbot-widget.js"
+      data-api-key="cb_2ffd20a3a6b242be9d7e77b3da146f9e"
+    ></script>
+</body>
 </html>
 
